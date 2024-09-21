@@ -109,7 +109,7 @@ M.formatters = {
         hl = "DiagnosticSign" .. name,
       }
     else
-      return sign and { text = sign.text, hl = sign.texthl } or { text = name } or nil
+      return type(signs) == "table" and sign and { text = sign.text, hl = sign.texthl } or { text = name } or nil
     end
   end,
   file_icon = function(ctx)
